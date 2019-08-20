@@ -7,6 +7,8 @@ const { check, validationResult } = require("express-validator");
 // @route       PUT  api/restaurants
 // @description Create or Update a post
 // @access      Public
+// If the id isnt provided, it will create a new order.
+//If the id is provided, It will update modify older one
 router.put(
   "/:resId",
   [
