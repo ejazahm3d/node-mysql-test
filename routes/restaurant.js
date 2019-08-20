@@ -35,8 +35,7 @@ router.put(
         if (err) {
           return console.error(err.message);
         }
-        // get inserted id
-        res.status(201).json(fields);
+        res.status(201).json({ msg: "Order Updated" });
       });
     } else {
       const sql = `
@@ -50,7 +49,7 @@ router.put(
           return console.error(err.message);
         }
 
-        res.status(201).json(results);
+        res.status(201).json({ msg: "Order Created!" });
       });
     }
   }
@@ -85,7 +84,7 @@ router.delete(
         return console.error(err.message);
       }
 
-      res.status(201).json(results);
+      res.status(201).json("Order Deleted!");
     });
   }
 );
